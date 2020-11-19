@@ -106,3 +106,6 @@ dist
 # IDEs
 # Jetbrains
 .idea
+
+# Virtual environment Python
+/python/venv/

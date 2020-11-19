@@ -62,3 +62,92 @@
 // Motion UI
 @include motion-ui-transitions;
 @include motion-ui-animations;
+
+// Styles personnalisés
+
+body {
+  color: white;
+  @include breakpoint(medium) {
+    background-image: url("../img/background.jpg");
+    background-repeat: repeat-y;
+    background-size: 100%;
+  }
+}
+
+h1 {
+  text-align: center;
+}
+
+.subtitle {
+  text-align: center;
+  padding-bottom: rem-calc(20);
+  font-size: rem-calc(24);
+  padding-left: rem-calc(20);
+  padding-right: rem-calc(20);
+}
+
+.img-header {
+  position: relative;
+  overflow: hidden;
+  height: 50vh;
+  border: rem-calc(3) solid smart-scale(get-color(background), 15%);
+
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+  }
+}
+
+.caption {
+  padding-top: rem-calc(6);
+  text-align: right;
+  color: smart-scale(get-color(background), 50%);
+  font-size: rem-calc(14);
+}
+
+.encart {
+  margin-top: rem-calc(50);
+  font-size: rem-calc(20);
+  background-color: smart-scale(get-color(background), 10%);
+
+  .text-encart {
+    padding: rem-calc(32);
+
+    h2 {
+      text-align: center;
+    }
+
+    .illustrations {
+      margin-top: rem-calc(20);
+      margin-bottom: rem-calc(20);
+    }
+  }
+}
+
+header {
+  margin: 1.25rem 0 rem-calc(10) 0;
+  hr {
+    border-bottom: 1px solid smart-scale(get-color(background), 30%);
+  }
+}
+
+footer {
+  margin: rem-calc(40) 0;
+
+  hr {
+    border-bottom: 1px solid smart-scale(get-color(background), 30%);
+  }
+
+  .icons-rs {
+    color: get-color(primary);
+
+    svg {
+      width: rem-calc(30);
+      height: auto;
+    }
+  }
+}
+
